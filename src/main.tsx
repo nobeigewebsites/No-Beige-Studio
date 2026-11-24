@@ -1,38 +1,66 @@
 
 import React from 'react';
+
 import ReactDOM from 'react-dom/client';
-import { HashRouter } from 'react-router-dom';
+
+import {
+  HashRouter,
+} from 'react-router-dom';
 
 import App from './App';
 
 import PreferencesProvider from './components/PreferencesProvider';
 
-/* ========================================
-   NO BEIGE STUDIO
-   Global Stylesheets
-======================================== */
+import CatalogueProvider from './components/CatalogueProvider';
 
 import './styles/global.css';
+
 import './styles/components.css';
+
+/* ========================================
+   NO BEIGE STUDIO
+   Application Entry Point
+
+   Global preferences.
+   Universal catalogue.
+   Application routing.
+   Shared application lifecycle.
+======================================== */
+
+const rootElement =
+  document.getElementById('root');
+
+if (!rootElement) {
+  throw new Error(
+    'NO BEIGE STUDIO could not locate the application root.'
+  );
+}
 
 /* ========================================
    APPLICATION INITIALISATION
 ======================================== */
 
-const rootElement = document.getElementById('root');
-
-if (!rootElement) {
-  throw new Error(
-    'NO BEIGE STUDIO: Root element not found.'
+const root =
+  ReactDOM.createRoot(
+    rootElement
   );
-}
 
-ReactDOM.createRoot(rootElement).render(
+root.render(
   <React.StrictMode>
+
     <PreferencesProvider>
-      <HashRouter>
-        <App />
-      </HashRouter>
+
+      <CatalogueProvider>
+
+        <HashRouter>
+
+          <App />
+
+        </HashRouter>
+
+      </CatalogueProvider>
+
     </PreferencesProvider>
+
   </React.StrictMode>
 );
