@@ -1,0 +1,1118 @@
+
+/* ========================================
+   NO BEIGE STUDIO
+   Dashboard Design
+======================================== */
+
+.dashboard-page {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ========================================
+   HERO SECTION
+======================================== */
+
+.dashboard-hero {
+  position: relative;
+  isolation: isolate;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  align-items: center;
+
+  min-height: 370px;
+  padding: clamp(24px, 4vw, 54px);
+
+  background:
+    radial-gradient(
+      ellipse at 85% 20%,
+      rgba(177, 138, 255, 0.19),
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 5% 100%,
+      rgba(0, 213, 232, 0.12),
+      transparent 55%
+    ),
+    linear-gradient(
+      135deg,
+      #101b30,
+      #151329 65%,
+      #21152f
+    );
+
+  border: 1px solid rgba(177, 138, 255, 0.18);
+  border-radius: var(--radius-xl);
+
+  overflow: hidden;
+}
+
+.dashboard-hero-decoration {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    );
+
+  background-size: 36px 36px;
+
+  mask-image:
+    linear-gradient(
+      90deg,
+      transparent,
+      black
+    );
+
+  pointer-events: none;
+}
+
+.dashboard-hero-content {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+}
+
+.dashboard-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-bottom: 22px;
+
+  color: #00d5e8;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.1px;
+}
+
+.dashboard-hero-title {
+  max-width: 750px;
+
+  color: #f4f7fc;
+
+  font-family: var(--font-heading);
+  font-size: clamp(38px, 5.5vw, 76px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -2.8px;
+}
+
+.dashboard-hero-title span {
+  background:
+    linear-gradient(
+      100deg,
+      #00d5e8,
+      #b18aff 50%,
+      #ff3d8d
+    );
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dashboard-hero-description {
+  max-width: 540px;
+
+  margin-top: 24px;
+
+  color: #c4cde0;
+  font-size: clamp(14px, 1.5vw, 17px);
+  line-height: 1.85;
+}
+
+.dashboard-hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  margin-top: 28px;
+}
+
+.dashboard-hero-actions .button {
+  min-height: 50px;
+  padding: 13px 20px;
+}
+
+.dashboard-hero-actions .button-primary {
+  background: #00d5e8;
+  color: #08121c;
+
+  box-shadow:
+    0 6px 25px rgba(0, 213, 232, 0.16);
+}
+
+.dashboard-hero-actions .button-primary:hover {
+  background: #56e5f2;
+}
+
+.dashboard-hero-actions .button-secondary {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.16);
+  color: #f4f7fc;
+}
+
+.dashboard-hero-note {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  margin-top: 22px;
+
+  color: #b2bed1;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.dashboard-hero-note svg {
+  flex-shrink: 0;
+  color: #a9e52c;
+}
+
+/* ========================================
+   HERO ARTWORK
+======================================== */
+
+.dashboard-hero-art {
+  position: relative;
+
+  display: grid;
+  place-items: center;
+
+  width: 100%;
+  min-height: 280px;
+  aspect-ratio: 1;
+
+  pointer-events: none;
+}
+
+.hero-orbit {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  aspect-ratio: 1;
+
+  border: 1px solid rgba(177, 138, 255, 0.2);
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.hero-orbit-one {
+  width: 46%;
+  border-color: rgba(0, 213, 232, 0.22);
+}
+
+.hero-orbit-two {
+  width: 72%;
+  border-style: dashed;
+}
+
+.hero-orbit-three {
+  width: 94%;
+  border-color: rgba(255, 61, 141, 0.15);
+}
+
+.hero-art-centre {
+  position: relative;
+
+  display: grid;
+  place-items: center;
+
+  width: clamp(90px, 11vw, 150px);
+  aspect-ratio: 1;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0, 213, 232, 0.16),
+      rgba(177, 138, 255, 0.2)
+    );
+
+  border: 1px solid rgba(177, 138, 255, 0.45);
+  border-radius: 28px;
+
+  color: #b18aff;
+
+  box-shadow:
+    0 0 70px rgba(177, 138, 255, 0.15);
+
+  transform: rotate(-12deg);
+}
+
+.hero-art-centre svg {
+  width: 58%;
+  height: 58%;
+  transform: rotate(12deg);
+}
+
+.hero-floating-icon {
+  position: absolute;
+
+  display: grid;
+  place-items: center;
+
+  width: clamp(48px, 5vw, 68px);
+  aspect-ratio: 1;
+
+  background: #172034;
+  border: 1px solid currentColor;
+  border-radius: 18px;
+
+  box-shadow: var(--shadow-large);
+}
+
+.hero-icon-one {
+  top: 12%;
+  right: 14%;
+
+  color: #ff3d8d;
+
+  transform: rotate(12deg);
+}
+
+.hero-icon-two {
+  bottom: 15%;
+  right: 12%;
+
+  color: #a9e52c;
+
+  transform: rotate(-10deg);
+}
+
+.hero-icon-three {
+  top: 36%;
+  left: 4%;
+
+  color: #00d5e8;
+
+  transform: rotate(-14deg);
+}
+
+/* ========================================
+   DASHBOARD STATISTICS
+======================================== */
+
+.dashboard-statistics {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 16px;
+}
+
+.dashboard-stat-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+
+  min-width: 0;
+  padding: 20px;
+
+  background: var(--surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-large);
+
+  box-shadow: var(--shadow-small);
+}
+
+.stat-icon {
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  width: 48px;
+  height: 48px;
+
+  border-radius: 13px;
+}
+
+.stat-icon-cyan {
+  background: rgba(0, 213, 232, 0.1);
+  color: var(--cyan);
+}
+
+.stat-icon-purple {
+  background: rgba(177, 138, 255, 0.1);
+  color: var(--purple);
+}
+
+.stat-icon-lime {
+  background: rgba(169, 229, 44, 0.1);
+  color: var(--lime);
+}
+
+.stat-icon-pink {
+  background: rgba(255, 61, 141, 0.1);
+  color: var(--pink);
+}
+
+.stat-content {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.stat-label {
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.stat-value {
+  margin-top: 5px;
+
+  color: var(--text-primary);
+
+  font-family: var(--font-heading);
+  font-size: 29px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.7px;
+}
+
+.stat-value small {
+  color: var(--text-muted);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.stat-plan {
+  color: var(--lime);
+  font-size: 19px;
+  letter-spacing: -0.4px;
+}
+
+.stat-description {
+  margin-top: 7px;
+
+  color: var(--text-muted);
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+/* ========================================
+   DASHBOARD SECTIONS
+======================================== */
+
+.dashboard-section {
+  min-width: 0;
+}
+
+.dashboard-section .section-header {
+  margin-bottom: 22px;
+}
+
+.dashboard-section .section-title {
+  font-size: clamp(23px, 2.5vw, 30px);
+  letter-spacing: -0.7px;
+}
+
+.dashboard-section-eyebrow {
+  margin-bottom: 8px;
+
+  color: var(--cyan);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.dashboard-section-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: var(--purple);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* ========================================
+   STUDIO GRID
+======================================== */
+
+.dashboard-studio-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+.dashboard-studio-grid .studio-card {
+  min-height: 365px;
+}
+
+.dashboard-studio-grid .studio-card-visual {
+  min-height: 180px;
+}
+
+/* ========================================
+   RECENT PROJECTS
+======================================== */
+
+.dashboard-project-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+.dashboard-empty-projects {
+  min-height: 290px;
+
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(0, 213, 232, 0.035),
+      transparent 65%
+    ),
+    var(--surface);
+}
+
+.dashboard-empty-icon {
+  display: grid;
+  place-items: center;
+
+  width: 82px;
+  height: 82px;
+
+  margin-bottom: 6px;
+
+  background: rgba(0, 213, 232, 0.07);
+  border: 1px solid rgba(0, 213, 232, 0.13);
+  border-radius: 22px;
+
+  color: var(--cyan);
+}
+
+.dashboard-empty-projects h3 {
+  font-size: 22px;
+}
+
+.dashboard-empty-projects p {
+  max-width: 450px;
+  font-size: 13px;
+}
+
+.dashboard-empty-projects .button {
+  margin-top: 6px;
+}
+
+/* ========================================
+   DISCOVERY CARDS
+======================================== */
+
+.dashboard-discovery-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+.dashboard-discovery-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  min-width: 0;
+  min-height: 240px;
+  padding: 24px;
+
+  background: var(--surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-large);
+
+  box-shadow: var(--shadow-small);
+
+  transition:
+    transform var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition);
+}
+
+.dashboard-discovery-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--discovery-colour);
+  box-shadow: var(--shadow-large);
+}
+
+.discovery-cyan {
+  --discovery-colour: var(--cyan);
+  --discovery-background: rgba(0, 213, 232, 0.08);
+}
+
+.discovery-pink {
+  --discovery-colour: var(--pink);
+  --discovery-background: rgba(255, 61, 141, 0.08);
+}
+
+.discovery-purple {
+  --discovery-colour: var(--purple);
+  --discovery-background: rgba(177, 138, 255, 0.08);
+}
+
+.discovery-icon {
+  display: grid;
+  place-items: center;
+
+  width: 62px;
+  height: 62px;
+
+  background: var(--discovery-background);
+  border-radius: 16px;
+
+  color: var(--discovery-colour);
+}
+
+.discovery-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.discovery-content h3 {
+  font-size: 20px;
+  letter-spacing: -0.4px;
+}
+
+.discovery-content p {
+  margin-top: 10px;
+  margin-bottom: 20px;
+
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.discovery-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: auto;
+
+  color: var(--discovery-colour);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* ========================================
+   PLATFORM PHILOSOPHY
+======================================== */
+
+.dashboard-philosophy {
+  position: relative;
+
+  padding: clamp(22px, 4vw, 36px);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(177, 138, 255, 0.045),
+      transparent 60%
+    ),
+    var(--surface);
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+}
+
+.philosophy-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.philosophy-icon {
+  display: grid;
+  place-items: center;
+
+  flex-shrink: 0;
+
+  width: 60px;
+  height: 60px;
+
+  background: rgba(177, 138, 255, 0.12);
+  border-radius: 16px;
+
+  color: var(--purple);
+}
+
+.philosophy-heading h2 {
+  max-width: 750px;
+
+  font-size: clamp(21px, 3vw, 30px);
+  letter-spacing: -0.7px;
+}
+
+.philosophy-heading p {
+  margin-top: 10px;
+
+  color: var(--cyan);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.philosophy-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 16px;
+
+  margin-top: 28px;
+  margin-bottom: 26px;
+}
+
+.philosophy-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+
+  min-width: 0;
+  padding: 18px;
+
+  background: var(--surface-raised);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-medium);
+}
+
+.philosophy-item > svg {
+  flex-shrink: 0;
+  color: var(--cyan);
+}
+
+.philosophy-item:nth-child(2) > svg {
+  color: var(--purple);
+}
+
+.philosophy-item:nth-child(3) > svg {
+  color: var(--lime);
+}
+
+.philosophy-item:nth-child(4) > svg {
+  color: var(--pink);
+}
+
+.philosophy-item > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.philosophy-item strong {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.philosophy-item span {
+  color: var(--text-secondary);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* ========================================
+   DASHBOARD FOOTER
+======================================== */
+
+.dashboard-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  padding: 20px 0 8px;
+
+  border-top: 1px solid var(--border-subtle);
+
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
+.dashboard-footer span:last-child {
+  color: var(--cyan);
+  font-weight: 700;
+}
+
+/* ========================================
+   LARGE DESKTOPS
+======================================== */
+
+@media (min-width: 1700px) {
+  .dashboard-studio-grid {
+    grid-template-columns:
+      repeat(5, minmax(0, 1fr));
+  }
+
+  .dashboard-studio-grid .studio-card {
+    min-height: 400px;
+  }
+}
+
+/* ========================================
+   SMALL DESKTOPS AND CHROMEBOOKS
+======================================== */
+
+@media (max-width: 1350px) {
+  .dashboard-statistics {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboard-project-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboard-studio-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1100px) {
+  .dashboard-hero {
+    grid-template-columns:
+      minmax(0, 1fr) minmax(0, 0.65fr);
+  }
+
+  .dashboard-discovery-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .dashboard-hero-title {
+    letter-spacing: -1.8px;
+  }
+}
+
+/* ========================================
+   TABLETS
+======================================== */
+
+@media (max-width: 760px) {
+  .dashboard-page {
+    gap: 26px;
+  }
+
+  .dashboard-hero {
+    grid-template-columns: minmax(0, 1fr);
+
+    min-height: auto;
+    padding: 30px;
+  }
+
+  .dashboard-hero-art {
+    position: absolute;
+
+    top: 0;
+    right: -60px;
+
+    width: 280px;
+    min-height: 0;
+
+    opacity: 0.15;
+  }
+
+  .dashboard-hero-content {
+    max-width: 100%;
+  }
+
+  .dashboard-hero-title {
+    font-size: clamp(36px, 7vw, 58px);
+  }
+
+  .dashboard-stat-card {
+    padding: 16px;
+  }
+
+  .dashboard-studio-grid {
+    gap: 14px;
+  }
+
+  .dashboard-discovery-grid {
+    gap: 14px;
+  }
+
+  .dashboard-discovery-card {
+    padding: 20px;
+  }
+
+  .philosophy-grid {
+    gap: 12px;
+  }
+}
+
+/* ========================================
+   MOBILE DEVICES
+======================================== */
+
+@media (max-width: 520px) {
+  .dashboard-page {
+    gap: 24px;
+  }
+
+  .dashboard-hero {
+    padding: 24px 20px;
+    border-radius: 18px;
+  }
+
+  .dashboard-eyebrow {
+    font-size: 9px;
+    letter-spacing: 1.2px;
+  }
+
+  .dashboard-hero-title {
+    font-size: clamp(34px, 9vw, 46px);
+    letter-spacing: -1.6px;
+  }
+
+  .dashboard-hero-description {
+    margin-top: 18px;
+    font-size: 14px;
+  }
+
+  .dashboard-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+
+    margin-top: 22px;
+  }
+
+  .dashboard-hero-actions .button {
+    width: 100%;
+  }
+
+  .dashboard-hero-note {
+    align-items: flex-start;
+    font-size: 11px;
+  }
+
+  .dashboard-hero-art {
+    right: -90px;
+    opacity: 0.12;
+  }
+
+  .dashboard-statistics {
+    gap: 10px;
+  }
+
+  .dashboard-stat-card {
+    flex-direction: column;
+    gap: 10px;
+
+    padding: 13px;
+    border-radius: 14px;
+  }
+
+  .stat-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+  }
+
+  .stat-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .stat-value {
+    font-size: 25px;
+  }
+
+  .stat-plan {
+    font-size: 16px;
+  }
+
+  .stat-label {
+    font-size: 11px;
+  }
+
+  .stat-description {
+    font-size: 10px;
+  }
+
+  .dashboard-studio-grid,
+  .dashboard-project-grid,
+  .dashboard-discovery-grid,
+  .philosophy-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .dashboard-studio-grid .studio-card {
+    min-height: 0;
+  }
+
+  .dashboard-section-note {
+    font-size: 11px;
+  }
+
+  .dashboard-section-eyebrow {
+    font-size: 9px;
+  }
+
+  .dashboard-discovery-card {
+    min-height: 0;
+  }
+
+  .philosophy-heading {
+    flex-direction: column;
+  }
+
+  .dashboard-philosophy {
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .philosophy-item {
+    padding: 15px;
+  }
+
+  .dashboard-philosophy > .button {
+    width: 100%;
+  }
+
+  .dashboard-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ========================================
+   LARGE TEXT ACCESSIBILITY
+======================================== */
+
+:root[data-large-text='true'] :is(
+  .dashboard-eyebrow,
+  .dashboard-hero-description,
+  .dashboard-hero-note,
+  .dashboard-section-eyebrow,
+  .dashboard-section-note,
+  .stat-label,
+  .stat-description,
+  .discovery-content p,
+  .discovery-link,
+  .philosophy-item strong,
+  .philosophy-item span,
+  .philosophy-heading p,
+  .dashboard-footer,
+  .dashboard-empty-projects p
+) {
+  font-size: 1rem;
+}
+
+:root[data-large-text='true'] .dashboard-statistics {
+  grid-template-columns:
+    repeat(auto-fit, minmax(min(240px, 100%), 1fr));
+}
+
+:root[data-large-text='true'] .dashboard-studio-grid,
+:root[data-large-text='true'] .dashboard-project-grid,
+:root[data-large-text='true'] .dashboard-discovery-grid {
+  grid-template-columns:
+    repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+}
+
+/* ========================================
+   HIGH CONTRAST ACCESSIBILITY
+======================================== */
+
+:root[data-theme='contrast'] .dashboard-hero {
+  background: #000000;
+  border: 2px solid #ffffff;
+}
+
+:root[data-theme='contrast'] .dashboard-hero-title span {
+  background: none;
+  color: #00ffff;
+  -webkit-text-fill-color: #00ffff;
+}
+
+:root[data-theme='contrast'] .dashboard-hero-description,
+:root[data-theme='contrast'] .dashboard-hero-note {
+  color: #ffffff;
+}
+
+:root[data-theme='contrast'] :is(
+  .dashboard-hero-art,
+  .dashboard-hero-decoration
+) {
+  display: none;
+}
+
+:root[data-theme='contrast'] .dashboard-hero {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+:root[data-theme='contrast'] :is(
+  .dashboard-stat-card,
+  .dashboard-discovery-card,
+  .dashboard-philosophy,
+  .philosophy-item,
+  .dashboard-empty-projects
+) {
+  border: 1px solid #ffffff;
+}
+
+:root[data-theme='contrast'] .dashboard-discovery-card:hover {
+  outline: 2px solid #ffff00;
+}
+
+/* ========================================
+   LIGHTWEIGHT PERFORMANCE MODE
+======================================== */
+
+:root[data-performance-mode='lightweight'] :is(
+  .dashboard-hero-art,
+  .dashboard-hero-decoration
+) {
+  display: none;
+}
+
+:root[data-performance-mode='lightweight'] .dashboard-hero {
+  grid-template-columns: minmax(0, 1fr);
+  background: #151b2c;
+}
+
+:root[data-performance-mode='lightweight'] :is(
+  .dashboard-stat-card,
+  .dashboard-discovery-card,
+  .studio-card,
+  .project-card
+) {
+  box-shadow: none;
+  transition: none;
+}
+
+:root[data-performance-mode='lightweight'] :is(
+  .dashboard-discovery-card,
+  .studio-card,
+  .project-card
+):hover {
+  transform: none;
+  box-shadow: none;
+}
