@@ -7,7 +7,17 @@ import App from './App';
 
 import PreferencesProvider from './components/PreferencesProvider';
 
+/* ========================================
+   NO BEIGE STUDIO
+   Global Stylesheets
+======================================== */
+
 import './styles/global.css';
+import './styles/components.css';
+
+/* ========================================
+   APPLICATION INITIALISATION
+======================================== */
 
 const rootElement = document.getElementById('root');
 
